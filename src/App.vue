@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view name="header"></router-view>
+    <div id="app-content">
+      <transition name="app-router-fade" mode="out-in">
+        <router-view :key="defaultViewKey"></router-view>
+      </transition>
+    </div>
+    <router-view name="footer"></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    export default {
+        name: 'App',
+        components: {
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+        },
+        computed: {
+            defaultViewKey: function() {
+                return this.$route.name;
+            }
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html, body {
+    height: 100%;
+  }
+  body {
+    margin: initial;
+    font-family: PMS;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: white;
+  }
+  @font-face {
+    font-family: PMS;
+    src: url('./assets/PMS-Bold.ttf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: PMS;
+    src: url('./assets/PMS-Medium.ttf');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: PMS;
+    src: url('./assets/PMS-Regular.ttf');
+    font-weight: 500;
+  }
+  #app-content {
+    flex: 1 0 auto;
+    max-width: 1920px;
+    align-self: center;
+    width: -webkit-fill-available;
+  }
 </style>
