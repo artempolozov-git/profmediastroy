@@ -1,19 +1,19 @@
 <template>
   <div class="header">
-    <div class="header-logotype">ГК «ПрофМедиаСтрой»</div>
+    <div class="header-logotype">
+      <span v-scroll-to="{el:'#top', offset: -150}">ГК «ПрофМедиаСтрой»</span>
+    </div>
     <div class="header-links">
-      <span>Услуги</span>
-      <span>Портфолио</span>
-      <span>О нас</span>
-      <span>Контакты</span>
+      <span v-scroll-to="{el:'#services', offset: -150}">Услуги</span>
+      <span v-scroll-to="{el:'#portfolio', offset: -80}">Наши работы</span>
+      <span v-scroll-to="{el:'#about-company', offset: -150}">О компании</span>
+      <span v-scroll-to="{el:'#contacts', offset: -130}">Контакты</span>
     </div>
     <div class="send-buttons">
-      <a href="mailto:denissham@yandex.ru" class="email-button">
-        <div class="button">
-          <img src="@/assets/icons/message.svg">
-          <span>Написать</span>
+        <div class="button" @click="feedbackForm">
+          <img src="@/assets/icons/buy.svg">
+          <span>Заказать</span>
         </div>
-      </a>
       <a href="tel:+79778546928" class="phone-button">
         <div class="button" id="phone">
           <img src="@/assets/icons/phone-button.svg">
@@ -26,7 +26,13 @@
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+        methods: {
+            feedbackForm(){
+                var form = document.getElementById("feedback");
+                form.style.display = (form.style.display == 'none') ? 'block' : 'none'
+            }
+        },
     }
 </script>
 
@@ -34,29 +40,34 @@
 .header {
   display: flex;
   align-items: center;
-  width: 100vw;
-  height: 20vh;
-  padding: 50px 200px;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  padding: 40px 150px;
   box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 5px 5px -5px rgba(144, 144, 144, 0.7);
 }
 .header-logotype {
-  padding: 10px 30px;
-  margin-right: 30px;
-  box-sizing: border-box;
-  font-size: 1.5vw;
+  margin-right: 50px;
+  font-size: 2em;
   text-align: center;
-  color: white;
-  font-weight: normal;
-  background-color: #066fba;
+  color: #0a2c87;
+  font-weight: bold;
+  user-select: none;
 }
 .header-logotype:hover {
-  background-color: #0658a4;
+  color: #0a34af;
   cursor: pointer;
 }
 .header-links > span {
+  font-size: 1.3em;
   color: #2c2c2c;
-  margin-right: 30px;
-  font-weight: normal;
+  margin-right: 40px;
+  user-select: none;
 }
 .header-links > span:hover {
   color: #009ee1;
@@ -67,9 +78,6 @@
   justify-content: center;
   margin-left: auto;
 }
-.email-button {
-  text-decoration: none;
-}
 .phone-button {
   text-decoration: none;
   margin-left: 30px;
@@ -78,18 +86,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #009ee1;
-  border-radius: 50px;
-  height: 55px;
+  background-color: #0a2c87;
+  height: 60px;
+  width: 13em;
+  border-radius: 100px;
   box-sizing: border-box;
   padding: 10px 30px;
 }
 .button:hover {
-  background-color: #066fba;
+  background-color: #0a37af;
+  cursor: pointer;
 }
 .button > span {
-  font-weight: bold;
   color: white;
+  font-size: 1.3em;
 }
 .button > img {
   width: 1.5vw;
@@ -99,6 +109,6 @@
   background-color: #00ad3a;
 }
 #phone:hover {
-  background-color: #008b2f;
+  background-color: #00c43c;
 }
 </style>

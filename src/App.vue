@@ -6,14 +6,17 @@
         <router-view :key="defaultViewKey"></router-view>
       </transition>
     </div>
+    <feedback></feedback>
     <router-view name="footer"></router-view>
   </div>
 </template>
 
 <script>
+    import Feedback from "@/components/Feedback";
     export default {
         name: 'App',
         components: {
+            Feedback
 
         },
         computed: {
