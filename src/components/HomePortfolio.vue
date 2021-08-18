@@ -136,4 +136,88 @@
   background-size: cover;
   background-position: top;
 }
+@media only screen and (max-width : 1890px) {
+  .portfolio-container {
+    padding: 100px 0 100px 100px;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .description {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1550px) {
+  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8 {
+    width: 100%;
+    height: 500px;
+  }
+}
+@media only screen and (max-width : 1280px) {
+  .portfolio-container {
+    padding: 80px 0 80px 80px;
+  }
+  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8 {
+    height: 450px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8 {
+    height: 400px;
+  }
+  .swiper-slide {
+    width: 50%;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: 50%;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: 50%;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .portfolio-container {
+    padding: 50px 0;
+  }
+  .portfolio-title {
+    margin: 0 0 30px 80px;
+  }
+  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8 {
+    height: 350px;
+  }
+  .swiper-slide {
+    width: 60%;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: 60%;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: 60%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .portfolio-container {
+    padding: 40px 0;
+  }
+  .portfolio-title {
+    margin: 0 0 30px 40px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .swiper-slide {
+    width: 80%;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: 80%;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: 80%;
+  }
+}
+@media only screen and (max-width : 361px) {
+  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7, .slide-8 {
+    height: 300px;
+  }
+}
 </style>

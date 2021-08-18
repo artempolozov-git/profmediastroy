@@ -9,11 +9,11 @@
         </div>
         <div class="contacts" style="align-items: center">
           <img src="@/assets/icons/email.svg">
-          <a href="mailto:verhotour@gmail.com">denissham@yandex.ru</a>
+          <a href="denissham@yandex.ru">denissham@yandex.ru</a>
         </div>
         <div class="contacts" style="align-items: center">
           <img src="@/assets/icons/phone.svg">
-          <a href="tel:+79818595479">+7 981 859 54 79</a>
+          <a href="tel:+79778546928">+7 977 854 69 28</a>
         </div>
         <div class="send-buttons">
           <a href="mailto:denissham@yandex.ru" class="email-button">
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="contacts-map">
-        <div><iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0fb496afe65aca5a9e00b4379abc3254f864068d59a5133d1c038b3ac75c05db&amp;source=constructor" frameborder="0"></iframe></div>
+        <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0fb496afe65aca5a9e00b4379abc3254f864068d59a5133d1c038b3ac75c05db&amp;source=constructor" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -38,13 +38,13 @@
 </script>
 
 <style scoped>
-.home-contacts-container {
-  padding: 0 0 0 150px;
-  box-sizing: border-box;
-}
 .contacts-info {
   display: flex;
   align-items: center;
+}
+.contacts-wrapper {
+  padding: 100px 0px 100px 150px;
+  box-sizing: border-box;
 }
 .title {
   font-size: 2.5em;
@@ -56,7 +56,7 @@
   align-items: flex-start;
   width: 90%;
   margin-top: 30px;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   color: #4c4c4c;
 }
 .contacts > a {
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 .contacts > img {
-  width: 2vw;
+  width: 35px;
   margin-right: 10px;
 }
 .contacts-map {
@@ -79,10 +79,9 @@
   width: 900px;
   height: 600px;
 }
-
 .send-buttons {
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .email-button {
   text-decoration: none;
@@ -104,10 +103,91 @@
   color: white;
 }
 .button > img {
-  width: 1.5vw;
+  width: 25px;
   margin-right: 10px;
 }
 .button:hover {
   background-color: #d70a1f;
+}
+@media only screen and (max-width : 1890px) {
+  .title {
+    font-size: 2em;
+  }
+  .button > span {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1680px) {
+  .map {
+    width: 750px;
+  }
+}
+@media only screen and (max-width : 1540px) {
+  .contacts-wrapper {
+    padding: 100px 0px 100px 100px;
+  }
+  .map {
+    width: 700px;
+    height: 500px;
+  }
+}
+@media only screen and (max-width : 1540px) {
+  .map {
+    height: 550px;
+  }
+  .contacts {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (max-width : 1370px) {
+  .contacts-wrapper {
+    padding: 80px 0 80px 80px;
+  }
+  .map {
+    width: 600px;
+    height: 530px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .map {
+    width: 500px;
+    height: 400px;
+  }
+  .contacts {
+    font-size: 1em;
+  }
+  .contacts > img {
+    width: 25px;
+  }
+  .button {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .map {
+    display: none;
+  }
+  .contacts-wrapper {
+    padding: 50px 50px;
+    margin: auto;
+  }
+  .send-buttons {
+    display: flex;
+    margin-top: 30px;
+  }
+  .contacts {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width : 360px) {
+  .contacts-wrapper {
+    padding: 40px 40px;
+  }
 }
 </style>

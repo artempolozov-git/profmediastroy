@@ -1,24 +1,26 @@
 <template>
   <div class="home-about-container" id="about-company">
-    <div class="about-title">
-      <h1 class="title">О компании</h1>
-      <p class="description">ГК «ПрофМедиаСтрой» предлагает вам проектирование, строительство и аренду
-        выставочных стендов любой сложности с предоставлением оборудования
-        и сопутствующих услуг в Москве и Московской области!
-        Мы располагаем производственной базой с самым современным оборудованием
-        и складскими помещениями, что позволяет нам оперативно и качественно решать
-        любые вопросы наших заказчиков.
+    <div>
+      <div class="about-title">
+        <h1 class="title">О компании</h1>
+        <p class="description">ГК «ПрофМедиаСтрой» предлагает вам проектирование, строительство и аренду
+          выставочных стендов любой сложности с предоставлением оборудования
+          и сопутствующих услуг в Москве и Московской области!
+          Мы располагаем производственной базой с самым современным оборудованием
+          и складскими помещениями, что позволяет нам оперативно и качественно решать
+          любые вопросы наших заказчиков.
 
-        <br>Монтаж выставочных стендов осуществляется квалифицированными монтажниками,
-        имеющими многолетний опыт работы в выставочном строительстве. Работая на всех
-        выставочных площадках, мы имеем четкое представление об их специфике и требованиях.
-        Наша компания берет на себя все задачи связанные с подводом воды и электричества,
-        обеспечением мебелью и бытовой техникой!</p>
-    </div>
-    <div class="send-buttons" @click="feedbackForm">
-      <div class="button">
-        <img src="@/assets/icons/buy.svg">
-        <span>Заказать продукцию компании</span>
+          <br><span id="info-block-two">Монтаж выставочных стендов осуществляется квалифицированными монтажниками,
+          имеющими многолетний опыт работы в выставочном строительстве. Работая на всех
+          выставочных площадках, мы имеем четкое представление об их специфике и требованиях.
+          Наша компания берет на себя все задачи связанные с подводом воды и электричества,
+          обеспечением мебелью и бытовой техникой!</span></p>
+      </div>
+      <div class="send-buttons" @click="feedbackForm">
+        <div class="button">
+          <img src="@/assets/icons/buy.svg">
+          <span>Заказать продукцию компании</span>
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +40,8 @@
 
 <style scoped>
 .home-about-container {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 600px;
   padding: 100px 150px;
@@ -80,11 +84,72 @@
   user-select: none;
 }
 .button > img {
-  width: 1.5vw;
+  width: 20px;
   margin-right: 10px;
 }
 .button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+@media only screen and (max-width : 1890px) {
+  .title {
+    font-size: 2em;
+  }
+  .description {
+    font-size: 1em;
+  }
+  .button > span {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1537px) {
+  .description {
+    width: 60%;
+  }
+}
+@media only screen and (max-width : 1367px) {
+  .home-about-container {
+    padding: 100px 100px;
+  }
+}
+@media only screen and (max-width : 1367px) {
+  .home-about-container {
+    padding: 80px 80px;
+    height: 550px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .home-about-container {
+    height: auto;
+    padding: 50px 50px;
+  }
+  #info-block-two {
+    display: none;
+  }
+  .description {
+    width: 75%;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .home-about-container {
+    padding: 40px 40px;
+  }
+  #info-block-two {
+    display: none;
+  }
+  .description {
+    width: 100%;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width : 380px) {
+  .home-about-container {
+    padding: 40px 40px;
+  }
+  .button > span {
+    font-size: 0.7em;
+  }
 }
 </style>

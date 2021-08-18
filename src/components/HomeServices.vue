@@ -101,7 +101,7 @@
   cursor: pointer;
 }
 .outdoor-title {
-  font-size: 2em;
+  font-size: 1.5vw;
   font-weight: bold;
   color: #ffffff;
   background-color: #009ee1;
@@ -109,10 +109,10 @@
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
-  width: 68%;
+  width: max-content;
 }
 .stand-title {
-  font-size: 2em;
+  font-size: 1.5vw;
   font-weight: bold;
   color: #ffffff;
   background-color: #0a2973;
@@ -120,10 +120,10 @@
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
-  width: 75%;
+  width: max-content;
 }
 .polygraphy-title {
-  font-size: 2em;
+  font-size: 1.5vw;
   font-weight: bold;
   color: #ffffff;
   background-color: #bb0a1e;
@@ -131,7 +131,7 @@
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
-  width: 71%;
+  width: max-content;
 }
 .outdoor-block:hover .outdoor-title {
   transition: background-size .2s ease-in;
@@ -149,5 +149,86 @@
   font-size: 1.1em;
   color: #ffffff;
   margin-top: 15px;
+}
+@media only screen and (max-width : 1895px) {
+  .block-description {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1690px) {
+  .polygraphy-block {
+    padding: 69px 50px;
+  }
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 650px;
+  }
+}
+@media only screen and (max-width : 1550px) {
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 570px;
+  }
+}
+@media only screen and (max-width : 1367px) {
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 540px;
+  }
+  .polygraphy-block {
+    padding: 50px 50px;
+  }
+}
+@media only screen and (max-width : 1280px) {
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 500px;
+  }
+  .outdoor-title, .stand-title, .polygraphy-title {
+    font-size: 1.3vw;
+  }
+}
+@media only screen and (max-width : 1025px) {
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 400px;
+    padding: 40px 20px;
+  }
+  .block-description {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width : 800px) {
+  .block-description {
+    display: none;
+  }
+  .outdoor-block, .stand-block, .polygraphy-block {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+  }
+  .outdoor-block:hover, .stand-block:hover, .polygraphy-block:hover {
+    background-size: cover;
+  }
+  .polygraphy-title, .stand-title, .outdoor-title  {
+    font-weight: normal;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .outdoor-block, .stand-block, .polygraphy-block {
+    height: 350px;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .services-container {
+    display: block;
+  }
+  .block-description {
+    display: block;
+  }
+  .polygraphy-title, .stand-title, .outdoor-title  {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width : 430px) {
+  .polygraphy-title, .stand-title, .outdoor-title  {
+    font-size: 18px;
+  }
 }
 </style>

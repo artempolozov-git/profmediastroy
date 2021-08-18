@@ -55,4 +55,28 @@
 .button:hover {
   opacity: 0.8;
 }
+@media only screen and (max-width : 1890px) {
+  .home-news {
+    padding: 10px 100px;
+  }
+  .news-stroke {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1536px) {}
+@media only screen and (max-width : 1366px) {}
+@media only screen and (max-width : 1280px) {}
+@media only screen and (max-width : 1024px) {}
+@media only screen and (max-width : 800px) {
+  .home-news {
+    display: none;
+  }
+}
+@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 600px) {}
+@media only screen and (max-width : 533px) {}
+@media only screen and (max-width : 360px) {}
+@media only screen and (max-width : 320px) {}
+@media only screen and (max-width : 240px) {}
+@media only screen and (max-width : 176px) {}
 </style>

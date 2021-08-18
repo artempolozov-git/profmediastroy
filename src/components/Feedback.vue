@@ -4,7 +4,7 @@
     <div class="overlay">
       <form id="feedback-form" action="" method="POST" class="form-wrapper">
 
-        <div style="display: block; width: 100%;">
+        <div class="feedback-form-container">
           <div class="title-form">Заказ продукции</div>
           <div class="button-close">
             <span style="font-family: 'Gilroy'" class="closebtn" @click="feedbackForm">&times;</span>
@@ -186,6 +186,9 @@
     z-index: 100;
     position: fixed;
   }
+  .feedback-form-container {
+    width: 100%;
+  }
   .form-wrapper {
     display: flex;
     padding: 80px 120px;
@@ -229,6 +232,7 @@
     padding: 15px;
     outline: none;
     border: 2px solid #dfdfe2;
+    background-color: #ffffff;
   }
   .input-form:focus {
     border: 2px solid #0a34af;
@@ -303,46 +307,58 @@
     display: none; /* Safari and Chrome */
   }
   @media only screen and (max-width : 1680px) {
-    .overlay {
-      top: 5em;
-    }
-  }
-  @media only screen and (max-width : 1536px) {
-    .overlay {
-      top: 3em;
-    }
-  }
-  @media only screen and (max-width : 800px) {
-    .overlay {
-      top: 10em;
-    }
-  }
-  @media only screen and (max-width : 600px) {
-    .overlay {
-      width: 100vw;
-      top: 0;
-    }
-    .form-wrapper{
-      width: 100%;
-      height: 100vh;
-      align-items: center;
-    }
-    .input-form {
-      background-color: white;
-    }
-    .input-date {
-      background-color: white;
-    }
-  }
-  @media only screen and (max-width : 360px) {
-    .input-text {
-      font-size: .8em;
+    .title-form {
+      font-size: 2em;
     }
     .input-title > span {
       font-size: 1em;
     }
+    .input-text {
+      font-size: 1em;
+    }
+    .input-form {
+      font-size: 1em;
+      width: 27em;
+    }
+    .form-comment {
+      font-size: 1em;
+    }
+    .overlay {
+      width: 43em;
+    }
+  }
+  @media only screen and (max-width : 600px) {
+    .overlay {
+      width: 100%;
+      top: 0;
+    }
+    .closebtn {
+      font-size: 3em;
+    }
+    .form-wrapper {
+      padding: 80px 50px;
+      height: 100vh;
+    }
+    .title-form {
+      font-size: 1.5em;
+      text-align: center;
+    }
     .feedback-button {
       font-size: 1em;
+    }
+    .input-text, .form-comment {
+      width: 22em;
+    }
+    .input-form {
+      width: 24em;
+    }
+  }
+  @media only screen and (max-width : 360px) {
+    .input-text, .form-comment {
+      width: 14em;
+    }
+    .input-form {
+      width: 16em;
     }
   }
 </style>

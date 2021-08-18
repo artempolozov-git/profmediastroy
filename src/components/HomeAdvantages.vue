@@ -51,4 +51,47 @@
   text-align: center;
   margin-top: 10px;
 }
+@media only screen and (max-width : 1537px) {
+  .home-advantages-container {
+    padding: 100px 100px;
+  }
+  .advantage-description {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .home-advantages-container {
+    padding: 100px 80px;
+  }
+  .advantage-description {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .home-advantages-container {
+    padding: 80px 10px;
+  }
+  .advantage-description {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .home-advantages-container {
+    padding: 40px 10px;
+  }
+  .advantages-wrapper {
+    display: block;
+  }
+  .advantage-container {
+    width: 100%;
+  }
+  .advantage-container-two {
+    width: 100%;
+    border: none;
+    margin: 50px 0 50px 0;
+  }
+  .advantage-img {
+    width: 100px;
+  }
+}
 </style>

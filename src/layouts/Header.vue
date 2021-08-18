@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-logotype">
+    <div class="header-logotype" title="На главную">
       <span v-scroll-to="{el:'#top', offset: -150}">ГК «ПрофМедиаСтрой»</span>
     </div>
     <div class="header-links">
@@ -21,12 +21,17 @@
         </div>
       </a>
     </div>
+    <div class="burger-menu">
+      <burger-menu></burger-menu>
+    </div>
   </div>
 </template>
 
 <script>
+    import BurgerMenu from "@/components/BurgerMenu";
     export default {
         name: "Header",
+        components: {BurgerMenu},
         methods: {
             feedbackForm(){
                 var form = document.getElementById("feedback");
@@ -88,18 +93,16 @@
   justify-content: center;
   background-color: #0a2c87;
   height: 60px;
-  width: 13em;
+  width: 10em;
   border-radius: 100px;
   box-sizing: border-box;
   padding: 10px 30px;
+  color: white;
+  font-size: 1.3em;
 }
 .button:hover {
   background-color: #0a37af;
   cursor: pointer;
-}
-.button > span {
-  color: white;
-  font-size: 1.3em;
 }
 .button > img {
   width: 1.5vw;
@@ -110,5 +113,66 @@
 }
 #phone:hover {
   background-color: #00c43c;
+}
+.burger-menu {
+  display: none;
+}
+@media only screen and (max-width : 1890px) {
+  .header {
+    padding: 40px 100px;
+  }
+  .button {
+    width: 11em;
+    font-size: 1em;
+  }
+  .header-links > span {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width : 1536px) {
+  .header-logotype {
+    font-size: 1.7em;
+    margin-right: 30px;
+  }
+  .header-links > span {
+    margin-right: 30px;
+  }
+}
+@media only screen and (max-width : 1490px) {
+  .header {
+    padding: 40px 80px;
+  }
+}
+@media only screen and (max-width : 1340px) {
+  .burger-menu {
+    display: block;
+  }
+  .send-buttons {
+    display: none;
+  }
+  .header-links {
+    display: none;
+  }
+}
+@media only screen and (max-width : 770px) {
+  .header-logotype {
+    font-size: 1.5em;
+  }
+  .header {
+    padding: 50px 50px;
+  }
+}
+@media only screen and (max-width : 533px) {
+  .header {
+    padding: 40px 40px;
+  }
+}
+@media only screen and (max-width : 450px) {
+  .header {
+    padding: 40px 20px;
+  }
+  .header-logotype {
+    font-size: 1.2em;
+  }
 }
 </style>
