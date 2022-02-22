@@ -3,18 +3,11 @@
     <div>
       <div class="about-title">
         <h1 class="title">О компании</h1>
-        <p class="description">ГК «ПрофМедиаСтрой» предлагает вам проектирование, строительство и аренду
-          выставочных стендов любой сложности с предоставлением оборудования
-          и сопутствующих услуг в Москве и Московской области!
-          Мы располагаем производственной базой с самым современным оборудованием
-          и складскими помещениями, что позволяет нам оперативно и качественно решать
-          любые вопросы наших заказчиков.
-
-          <br><span id="info-block-two">Монтаж выставочных стендов осуществляется квалифицированными монтажниками,
-          имеющими многолетний опыт работы в выставочном строительстве. Работая на всех
-          выставочных площадках, мы имеем четкое представление об их специфике и требованиях.
-          Наша компания берет на себя все задачи связанные с подводом воды и электричества,
-          обеспечением мебелью и бытовой техникой!</span></p>
+        <p class="description">Мы работаем с 2011 года!
+          <br>Предлагаем Вам застройку стендов любой сложности! Эксклюзивные стенды с правом выкупа. Аренда любого оборудования,
+          используемого при проведении и презентации выставок, а так же аудио и видео аппаратуру.
+          Наши специалисты помогут провести Вашу выставку на высочайшем уровне!
+          Ждём Ваших вопросов по почте: profmediastroy@bk.ru или просто позвоните нам по телефону: +7 (495) 369 06 72!</p>
       </div>
       <div class="send-buttons" @click="feedbackForm">
         <div class="button">
@@ -43,7 +36,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 600px;
   padding: 100px 150px;
   box-sizing: border-box;
   background: url(../assets/images/about-background.webp);
@@ -73,9 +65,8 @@
   background-color: transparent;
   border: 3px solid #afafaf;
   border-radius: 50px;
-  height: 60px;
   box-sizing: border-box;
-  padding: 10px 30px;
+  padding: 20px 30px;
 }
 .button > span {
   font-weight: normal;
@@ -84,7 +75,7 @@
   user-select: none;
 }
 .button > img {
-  width: 20px;
+  width: 25px;
   margin-right: 10px;
 }
 .button:hover {
@@ -115,7 +106,6 @@
 @media only screen and (max-width : 1367px) {
   .home-about-container {
     padding: 80px 80px;
-    height: 550px;
   }
 }
 @media only screen and (max-width : 800px) {

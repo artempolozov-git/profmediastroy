@@ -25,7 +25,7 @@
         components: {
             HomeContacts,
             HomeOffers,
-            HomeAdvantages, HomeAboutCompany, HomePortfolio, HomeServices, HomeFirstScreen, HomeNews}
+            HomeAdvantages, HomeAboutCompany,  HomeServices, HomePortfolio, HomeFirstScreen, HomeNews}
     }
 </script>
 

@@ -117,7 +117,7 @@
     background-color: #0a2c87;
     height: 50px;
     width: 10em;
-    border-radius: 100px;
+    border-radius: 50px;
     box-sizing: border-box;
     padding: 10px 30px;
     color: white;
@@ -133,9 +133,9 @@
   #phone-burger:hover {
     background-color: #00c43c;
   }
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 780px) {
   .bm-burger-button {
-    top: 35px;
+    top: 30px;
     right: 42px;
   }
 }

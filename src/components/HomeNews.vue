@@ -1,15 +1,15 @@
 <template>
   <div class="home-news" id="top">
     <div class="news-stroke">
-      <span><strong>Новости компании:</strong> c 22-28 августа пройдет международный военно-технический форум «АРМИЯ-2021»</span>
+      <span><strong>Новости компании:</strong> В рамках совместного проекта ГК «ПрофМедиаСтрой» и переплетная Мастерская «ЗОЛОТОЙ ВЕК» изготовили подарочное издание книги «Мировая история нефти и газа». К изданию планируется ещё одна книга.</span>
     </div>
-    <div class="send-buttons">
+    <!--<div class="send-buttons">
       <a href="https://www.rusarmyexpo.ru/" target="_blank">
         <div class="button">
           <span>Открыть</span>
         </div>
       </a>
-    </div>
+    </div>!-->
   </div>
 </template>
 
@@ -25,7 +25,7 @@
   align-items: center;
   width: 100%;
   background-color: #009ee1;
-  padding: 10px 150px;
+  padding: 20px 150px;
   box-sizing: border-box;
 }
 .news-stroke {
@@ -57,26 +57,15 @@
 }
 @media only screen and (max-width : 1890px) {
   .home-news {
-    padding: 10px 100px;
+    padding: 20px 100px;
   }
   .news-stroke {
     font-size: 1em;
   }
 }
-@media only screen and (max-width : 1536px) {}
-@media only screen and (max-width : 1366px) {}
-@media only screen and (max-width : 1280px) {}
-@media only screen and (max-width : 1024px) {}
 @media only screen and (max-width : 800px) {
   .home-news {
-    display: none;
+    padding: 10px 30px;
   }
 }
-@media only screen and (max-width : 768px) {}
-@media only screen and (max-width : 600px) {}
-@media only screen and (max-width : 533px) {}
-@media only screen and (max-width : 360px) {}
-@media only screen and (max-width : 320px) {}
-@media only screen and (max-width : 240px) {}
-@media only screen and (max-width : 176px) {}
 </style>

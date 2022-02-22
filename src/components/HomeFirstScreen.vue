@@ -1,26 +1,29 @@
 <template>
   <div class="substrate-container">
     <div class="main-container">
-      <div class="logotype">ГК «ПрофМедиаСтрой»</div>
-      <div class="title">Аренда и продажа<br>выставочных стендов</div>
+      <div class="logotype">
+        <img src="@/assets/icons/pms-logo-white.svg">
+        <span>ГК «ПрофМедиаСтрой»</span>
+      </div>
+      <h1 class="title">Аренда и продажа<br>выставочных стендов</h1>
       <div class="contacts">
         <div class="email">
           <img src="@/assets/icons/email-blue.svg">
-          <a href="denissham@yandex.ru">denissham@yandex.ru</a>
+          <a href="mailto:profmediastroy@bk.ru">profmediastroy@bk.ru</a>
         </div>
         <div class="phone">
           <img src="@/assets/icons/phone-blue.svg">
-          <a href="tel:+79778546928">+7 977 854 69 28</a>
+          <a href="tel:+74953690672">+7 (495) 369-06-72</a>
         </div>
       </div>
       <div class="send-buttons">
-        <a href="mailto:denissham@yandex.ru" class="email-button">
+        <a href="mailto:profmediastroy@bk.ru" class="email-button">
           <div class="button">
             <img src="@/assets/icons/message.svg">
             <span>Написать</span>
           </div>
         </a>
-        <a href="tel:+79778546928" class="phone-button">
+        <a href="tel:+74953690672" class="phone-button">
           <div class="button">
             <img src="@/assets/icons/phone-button.svg">
             <span>Позвонить</span>
@@ -43,7 +46,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding: 100px 150px;
     box-sizing: border-box;
     background: url(../assets/images/background.webp);
     background-size: cover;
@@ -53,6 +57,8 @@
     width: 100%;
   }
   .logotype {
+    display: flex;
+    align-items: center;
     width: max-content;
     padding: 25px;
     box-sizing: border-box;
@@ -63,14 +69,16 @@
     color: white;
     background-color: #0a2c87;
   }
+  .logotype > img {
+    width: 50px;
+    margin-right: 15px;
+  }
   .title {
     font-size: 5vw;
     color: white;
     text-align: center;
-    width: 70%;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 50px auto 0;
   }
   .contacts {
     display: flex;
@@ -126,7 +134,7 @@
     padding: 20px 30px;
   }
   .button > span {
-    font-size: 1.5vw;
+    font-size: 1.3em;
     font-weight: bold;
     color: white;
   }
@@ -135,9 +143,29 @@
     margin-right: 10px;
   }
   .button:hover {
-    background-color: #066fba;
+    background-color: #00b1f5;
+  }
+  @media only screen and (max-width : 1890px) {
+    .button > span {
+      font-size: 1em;
+    }
+  }
+  @media only screen and (max-width: 1367px) {
+    .substrate-container {
+      padding: 90px 80px;
+    }
   }
   @media screen and (max-width: 800px) {
+    .button {
+      height: 50px;
+      width: 10em;
+      border-radius: 50px;
+      box-sizing: border-box;
+      padding: 10px 30px;
+    }
+    .substrate-container {
+      padding: 90px 50px;
+    }
     .logotype {
       font-size: 5vw;
     }
@@ -159,25 +187,25 @@
       justify-content: center;
     }
     .email > img, .phone > img {
-      width: 5vw;
-    }
-    .button > span {
-      font-size: 4vw;
+      width: 20px;
     }
     .button > img {
-      width: 4vw;
+      width: 20px;
     }
     @media screen and (max-width: 600px) {
-      .substrate-container {
-        height: 75vh;
-      }
       .logotype {
         padding: 15px 20px;
+      }
+      .logotype > img {
+        width: 25px;
+      }
+      .substrate-container {
+        padding: 70px 50px;
       }
     }
     @media screen and (max-width: 450px) {
       .substrate-container {
-        height: 60vh;
+        padding: 70px 30px;
       }
     }
   }

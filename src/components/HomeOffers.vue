@@ -6,7 +6,7 @@
         <div class="description">Оставьте свои контакты и мы свяжемся с вами,
           <br id="br-none">чтобы обсудить детали проекта и особенности будущего заказа!</div>
 
-        <form id="feedback-form" action="" method="POST" class="form-container">
+        <form id="feedback-form" action="https://formspree.io/f/xpzkkoyy" method="POST" class="form-container">
           <div class="input-container">
             <input name="Имя" type="text" placeholder="Имя" class="input-box" required>
             <masked-input v-model="phone" mask="\+\7 (111) 111 11-11" name="Телефон" type="text" placeholder="Телефон" class="input-box" required></masked-input>
@@ -26,6 +26,52 @@
         name: "HomeOffers",
         components: {
             MaskedInput
+        },
+        mounted() {
+
+            // get the form elements defined in your form HTML above
+
+            var form = document.getElementById("feedback-form");
+            var button = document.getElementById("form-button");
+            var status = document.getElementById("form-status");
+
+            // Success and Error functions for after the form is submitted
+
+            function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = "Спасибо, мы скоро c Вами свяжемся!";
+            }
+
+            function error() {
+                status.innerHTML = "Произошла ошибка при отправке!";
+            }
+
+            // handle the form submission event
+            console.log(form);
+            form.addEventListener("submit", function(ev) {
+                ev.preventDefault();
+                var data = new FormData(form);
+                ajax(form.method, form.action, data, success, error);
+            });
+
+
+            // helper function for sending an AJAX request
+
+            function ajax(method, url, data, success, error) {
+                var xhr = new XMLHttpRequest();
+                xhr.open(method, url);
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                    if (xhr.status === 200) {
+                        success(xhr.response, xhr.responseType);
+                    } else {
+                        error(xhr.status, xhr.response, xhr.responseType);
+                    }
+                };
+                xhr.send(data);
+            }
         }
     }
 </script>
@@ -75,11 +121,12 @@
   border-bottom: 2px solid #ffffff;
 }
 .button {
-  width: 10vw;
-  height: 60px;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: normal;
   font-family: PMS;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  width: 10em;
   color: #ffffff;
   background-color: transparent;
   border: 3px solid #afafaf;
@@ -101,16 +148,13 @@
   }
   .button {
     font-size: 1em;
+    width: 11em;
   }
 }
 @media only screen and (max-width : 1024px) {
   .home-offers-container {
     padding: 80px 80px;
     height: 350px;
-  }
-  .button {
-    width: 15vw;
-    height: 55px;
   }
 }
 @media only screen and (max-width : 800px) {
@@ -120,8 +164,11 @@
     background-size: auto;
   }
   .button {
-    width: 17vw;
-    height: 45px;
+    height: 50px;
+    width: 10em;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 10px 30px;
   }
   .input-box {
     width: 20vw;
@@ -138,7 +185,6 @@
     height: 450px;
   }
   .button {
-    width: 25vw;
     font-size: 1em;
     margin-top: 30px;
   }
@@ -148,9 +194,6 @@
   }
 }
 @media only screen and (max-width : 460px) {
-  .button {
-    width: 35vw;
-  }
   #br-none {
     display: none;
   }

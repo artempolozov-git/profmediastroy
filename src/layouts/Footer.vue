@@ -1,7 +1,10 @@
 <template>
   <div class="footer-container">
     <div class="footer-logotype">
-      <div class="logotype">ГК «ПрофМедиаСтрой»</div>
+      <div class="logotype">
+        <img src="@/assets/icons/pms-logo-white.svg">
+        <span>ГК «ПрофМедиаСтрой»</span>
+      </div>
       <div class="copyright">©2021 ПрофМедиаСтрой</div>
     </div>
     <div class="footer-contacts">
@@ -9,16 +12,20 @@
         <div class="email-phone">
           <div class="contacts" style="align-items: center">
             <img src="@/assets/icons/email-white.svg">
-            <a href="mailto:denissham@yandex.ru">denissham@yandex.ru</a>
+            <a href="mailto:profmediastroy@bk.ru">profmediastroy@bk.ru</a>
           </div>
           <div class="contacts" style="align-items: center">
             <img src="@/assets/icons/phone-white.svg">
-            <a href="tel:+79778546928">+7 977 854 69 28</a>
+            <a href="tel:+74953690672">+7 (495) 369-06-72</a>
+          </div>
+          <div class="contacts" style="align-items: center">
+            <img src="@/assets/icons/phone-white.svg">
+            <a href="tel:+79778546928">+7 (977) 854-69-28</a>
           </div>
         </div>
       </div>
-      <div class="send-buttons">
-        <a href="mailto:denissham@yandex.ru" class="email-button">
+      <!--<div class="send-buttons">
+        <a href="mailto:profmediastroy@vk.com" class="email-button">
           <div class="button">
             <img src="@/assets/icons/message.svg">
             <span>Написать</span>
@@ -28,9 +35,9 @@
           <div class="button" id="phone">
             <img src="@/assets/icons/phone-button.svg">
             <span>Позвонить</span>
-          </div>
+          </div>!
         </a>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -52,11 +59,17 @@
   background-color: #0d1430;
 }
 .logotype {
+  display: flex;
+  align-items: center;
   margin-right: 50px;
   font-size: 2em;
   color: #ffffff;
   font-weight: bold;
   user-select: none;
+}
+.logotype > img {
+  width: 50px;
+  margin-right: 15px;
 }
 .footer-contacts {
   margin-left: auto;
@@ -126,7 +139,7 @@
     height: auto;
   }
   .logotype {
-    text-align: center;
+    justify-content: center;
     font-size: 1.5em;
     margin-right: 0;
   }
@@ -144,13 +157,15 @@
     margin-top: 40px;
   }
 }
-@media only screen and (max-width : 450px) {
+@media only screen and (max-width : 550px) {
   .footer-container {
     padding: 40px 40px;
   }
   .logotype {
-    text-align: center;
     font-size: 1.2em;
+  }
+  .logotype > img {
+    width: 25px;
   }
   .button {
     height: 55px;

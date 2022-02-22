@@ -9,14 +9,18 @@
         </div>
         <div class="contacts" style="align-items: center">
           <img src="@/assets/icons/email.svg">
-          <a href="denissham@yandex.ru">denissham@yandex.ru</a>
+          <a href="mailto:profmediastroy@bk.ru">profmediastroy@bk.ru</a>
         </div>
         <div class="contacts" style="align-items: center">
           <img src="@/assets/icons/phone.svg">
-          <a href="tel:+79778546928">+7 977 854 69 28</a>
+          <a href="tel:+74953690672">+7 (495) 369-06-72</a>
+        </div>
+        <div class="contacts" style="align-items: center">
+          <img src="@/assets/icons/phone.svg">
+          <a href="tel:+79778546928">+7 (977) 854-69-28</a>
         </div>
         <div class="send-buttons">
-          <a href="mailto:denissham@yandex.ru" class="email-button">
+          <a href="mailto:profmediastroy@vk.com" class="email-button">
             <div class="button">
               <img src="@/assets/icons/message.svg">
               <span>Написать</span>
@@ -43,7 +47,7 @@
   align-items: center;
 }
 .contacts-wrapper {
-  padding: 100px 0px 100px 150px;
+  margin-left: 100px;
   box-sizing: border-box;
 }
 .title {
@@ -93,9 +97,8 @@
   color: #ffffff;
   background-color: #b80a1e;
   border-radius: 50px;
-  height: 70px;
   box-sizing: border-box;
-  padding: 20px 40px;
+  padding: 20px 30px;
 }
 .button > span {
   font-weight: normal;
@@ -123,9 +126,6 @@
   }
 }
 @media only screen and (max-width : 1540px) {
-  .contacts-wrapper {
-    padding: 100px 0px 100px 100px;
-  }
   .map {
     width: 700px;
     height: 500px;
@@ -141,7 +141,7 @@
 }
 @media only screen and (max-width : 1370px) {
   .contacts-wrapper {
-    padding: 80px 0 80px 80px;
+    margin-left: 80px;
   }
   .map {
     width: 600px;
@@ -164,6 +164,13 @@
   }
 }
 @media only screen and (max-width : 800px) {
+  .button {
+    height: 50px;
+    width: 10em;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+  }
   .map {
     display: none;
   }
@@ -187,7 +194,7 @@
 }
 @media only screen and (max-width : 360px) {
   .contacts-wrapper {
-    padding: 40px 40px;
+    margin-left: 40px;
   }
 }
 </style>

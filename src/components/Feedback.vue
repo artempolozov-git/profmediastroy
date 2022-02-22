@@ -2,7 +2,7 @@
   <div id="feedback" style="display: none;">
 
     <div class="overlay">
-      <form id="feedback-form" action="" method="POST" class="form-wrapper">
+      <form id="feedback-form" action="https://formspree.io/f/xpzkkoyy" method="POST" class="form-wrapper">
 
         <div class="feedback-form-container">
           <div class="title-form">Заказ продукции</div>
@@ -190,6 +190,7 @@
     width: 100%;
   }
   .form-wrapper {
+    -webkit-box-flex: 1;
     display: flex;
     padding: 80px 120px;
     box-sizing: border-box;
@@ -202,15 +203,18 @@
     margin-bottom: 1em;
   }
   .select-name {
+    -webkit-box-flex: 1;
     display: flex;
     margin-bottom: 1.5em;
   }
   .select-input {
+    -webkit-box-flex: 1;
     display: flex;
     align-items: center;
     margin-bottom: 1.5em;
   }
   .input-title {
+    -webkit-box-flex: 1;
     display: flex;
     margin-bottom: 1em;
   }
@@ -282,6 +286,7 @@
     font-family: PMS;
     font-weight: normal;
     background-color: #0a2c87;
+    border-radius: 50px;
     border: none;
   }
   .feedback-button:hover {
@@ -337,7 +342,7 @@
     }
     .form-wrapper {
       padding: 80px 50px;
-      height: 100vh;
+      height: auto;
     }
     .title-form {
       font-size: 1.5em;
@@ -353,12 +358,18 @@
       width: 24em;
     }
   }
-  @media only screen and (max-width : 360px) {
+  @media only screen and (max-width : 410px) {
     .input-text, .form-comment {
       width: 14em;
     }
     .input-form {
       width: 16em;
+    }
+    .input-text, .form-comment {
+      width: 15em;
+    }
+    .input-form {
+      width: 17em;
     }
   }
 </style>

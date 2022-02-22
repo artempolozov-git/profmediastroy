@@ -105,7 +105,6 @@
   font-weight: bold;
   color: #ffffff;
   background-color: #009ee1;
-  border-radius: 15px;
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
@@ -116,7 +115,6 @@
   font-weight: bold;
   color: #ffffff;
   background-color: #0a2973;
-  border-radius: 15px;
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
@@ -127,7 +125,6 @@
   font-weight: bold;
   color: #ffffff;
   background-color: #bb0a1e;
-  border-radius: 15px;
   text-align: center;
   padding: 10px 30px;
   box-sizing: border-box;
@@ -201,7 +198,7 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    height: 350px;
+    height: 400px;
   }
   .outdoor-block:hover, .stand-block:hover, .polygraphy-block:hover {
     background-size: cover;
